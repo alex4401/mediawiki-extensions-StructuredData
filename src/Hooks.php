@@ -57,9 +57,7 @@ class Hooks implements
                     '@type'       => 'SearchAction',
                     'target'      => wfAppendQuery(
                         $canonicalServer . str_replace( '$1', 'Special:Search', $articlePath ),
-                        [
-                            'search' => '{search_term_string}'
-                        ]
+                        'search={search_term_string}'
                     ),
                     'query-input' => 'required name=search_term_string',
                 ],
