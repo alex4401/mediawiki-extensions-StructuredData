@@ -24,7 +24,19 @@
 	},
 
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\StructuredData\\": "includes/"
+		"MediaWiki\\Extension\\StructuredData\\": "src/"
+	},
+
+	"HookHandlers": {
+		"StructuredData": {
+			"class": "MediaWiki\\Extension\\StructuredData\\Hooks",
+			"services": [
+				"MainConfig"
+			]
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "StructuredData"
 	},
 
 	"config_prefix": "wgStructuredData",
